@@ -1,5 +1,5 @@
 const input = require("fs").readFileSync("/dev/stdin", "utf8")
-const lines = input.trim().split("\n") // 2の文字列が入る
+const lines = input.trim().split("\n")
 console.log("INPUTを表示")
 console.log(lines)
 console.log("1行目を表示")
