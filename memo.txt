@@ -1,0 +1,7 @@
+function qbin() {
+   nasm -f bin "$1" -o tmp.bin
+   qemu tmp.bin
+   rm tmp.bin
+}
+# alias for qemu
+alias qemu="qemu-system-x86_64"
