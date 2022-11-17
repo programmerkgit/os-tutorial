@@ -93,3 +93,6 @@ I'm thankful to all those who have pointed out bugs and submitted pull requests.
 
 Please feel free to fork this repo. If many of you are interested in continuing the project, let me know and I'll link the "main fork" from here.
 # os-tutorial
+nasm -f elf64 hello.asm 
+ld hello.o
+./a.out
