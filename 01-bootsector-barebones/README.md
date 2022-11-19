@@ -25,7 +25,7 @@ e9 fd ff 00 00 00 00 00 00 00 00 00 00 00 00 00
 ```
 
 It is basically all zeros, ending with the 16-bit value
-`0xAA55` (beware of endianness, x86 is little-endian). 
+`0xAA55` (beware of endianness, x86 is little-endian).
 The first three bytes perform an infinite jump
 
 Simplest boot sector ever
@@ -60,3 +60,9 @@ I know you're anxious to try it out (I am!), so let's do it:
 You will see a window open which says "Booting from Hard Disk..." and
 nothing else. When was the last time you were so excited to see an infinite
 loop? ;-)
+
+### MEMO
+
+$$ and $ mark
+
+<https://stackoverflow.com/questions/46726434/what-does-double-dollar-sign-mean-in-x86-assembly-nasm>
