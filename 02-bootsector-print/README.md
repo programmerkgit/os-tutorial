@@ -51,3 +51,15 @@ Anyway, you know the drill:
 `qemu boot_sect_hello.bin`
 
 Your boot sector will say 'Hello' and hang on an infinite loop
+
+
+## MEMO
+BIOS interrupts does not exist in 32/64 bits mode. 
+int 0x10 interprets ah register because it runs on 16 bits mode.
+ah = 0x0e (write to console) and al is the first arguments, which is written to the console.
+
+
+Change it to "bits 16" instead, it works for me. BIOS interrupts (like 0x10) don't exist in 32/64 bit pmode.
+
+
+http://www.asmcommunity.net/forums/topic/?id=30330
