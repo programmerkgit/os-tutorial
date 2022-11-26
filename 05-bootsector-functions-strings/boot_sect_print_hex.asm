@@ -23,7 +23,7 @@ hex_loop:
 
 step2:
     ; 2. get the correct position of the string to place our ASCII char
-    ; bx <- base address + string length - index of char
+    ; bx <- base address + string length - index of char ('0x0000'の6文字。0xも文字数に含む)
     mov bx, HEX_OUT + 5 ; base + length
     sub bx, cx  ; our index variable
     mov [bx], al ; copy the ASCII char on 'al' to the position pointed by 'bx'
