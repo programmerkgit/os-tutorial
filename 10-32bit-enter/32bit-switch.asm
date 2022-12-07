@@ -4,7 +4,7 @@ switch_to_pm:
     lgdt [gdt_descriptor] ; 2. load the GDT descriptor (to GDT register. LIDT => Load Interrupt Descriptor Table)
     mov eax, cr0
     or eax, 0x1 ; 3. set 32-bit mode bit in cr0
-    mov cr0, eax
+    mov cr0, eax ; or cr0, 0x1 directly is not allowed. cr0 should be set via another register
     jmp CODE_SEG:init_pm ; 4. far jump by using a different segment
 
 [bits 32]
