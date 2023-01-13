@@ -95,4 +95,4 @@ Please feel free to fork this repo. If many of you are interested in continuing 
 # os-tutorial
 nasm -f elf64 hello.asm 
 ld hello.o
-./a.out
+./a.out# os-tutorial-mac-book-pro
