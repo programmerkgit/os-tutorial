@@ -1,21 +1,7 @@
-; ----------------------------------------------------------------------------------------
-; Writes "Hello, World" to the console using only system calls. Runs on 64-bit macOS only.
-; To assemble and run:
-;
-;     nasm -fmacho64 hello.asm && ld hello.o && ./a.out
-; ----------------------------------------------------------------------------------------
-
-          global    start
-
-          section   .text
-start:    mov       rax, 0x02000004         ; system call for write
-          mov       rdi, 1                  ; file handle 1 is stdout
-          mov       rsi, message            ; address of string to output
-          mov       rdx, 13                 ; number of bytes
-          syscall                           ; invoke operating system to do the write
-          mov       rax, 0x02000001         ; system call for exit
-          xor       rdi, rdi                ; exit code 0
-          syscall                           ; invoke operating system to exit
-
-          section   .data
-message:  db        "Hello, World", 10      ; note the newline at the end
+section .text ; section for keeping the actual code
+    global _start; [What is global directive](https://stackoverflow.com/questions/17898989/what-is-global-start-in-assembly-language#:~:text=global%20_start%20is%20just%20a,address%20where%20the%20program%20starts.)
+    ; global exports label on the object code. Linker(ld) can find exported label and ld can find where is the entry point of the excutable output.
+    ; _start is the default entry point name.
+    ; you can specify entry point name like `ld -e my_entry_point -o out a.o`
+_start:
+    mov edx, 10 ;
