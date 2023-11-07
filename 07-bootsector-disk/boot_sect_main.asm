@@ -5,7 +5,7 @@
     mov bx, 0x9000 ; es:bx = 0x0000:0x9000 = 0x09000 (Int13-2の仕様:https://stanislavs.org/helppc/int_13-2.html)。この領域にデータがコピーされる
     mov dh, 2 ; read 2 sectors // 512から2sector文を、bx 0x9000からはじまるstack領域にコピーする
     ;  mov dh, 3 ; read 3 sectors // 512から3sector文を、bx 0x9000からはじまるstack領域にコピーする
-    ; the bios sets 'dl' for our boot disk number
+    ; the    bios sets 'dl' for our boot disk number
     ; if you have trouble, use the '-fda' flag: 'qemu -fda file.bin'
     call disk_load
 

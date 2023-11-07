@@ -6,10 +6,10 @@ Please open page 14 [of this document](http://www.cs.bham.ac.uk/~exr/lectures/op
 <sup>1</sup>
 and look at the figure with the memory layout.
 
-The only goal of this lesson is to learn where the boot sector is stored
-
-I could just bluntly tell you that the BIOS places it at `0x7C00` and
-get it done with, but an example with wrong solutions will make things clearer.
+The only goal of this les0` and
+get it done with, but an example with wrong solutions wson is to learn where the boot sector is stored
+                                                       
+                                                       I could just bluntly tell you that the BIOS places it at `0x7C0ill make things clearer.
 
 We want to print an X on screen. We will try 4 different strategies
 and see which ones work and why.

@@ -3,6 +3,7 @@ mov ah, 0x0e ; tty
 mov al, [the_secret]
 int 0x10 ; we already saw this doesn't work, right?
 
+// implicitly binary is placed start at 0x7c00
 mov bx, 0x7c0 ; remember, the segment is automatically <<4 for you
 mov ds, bx
 ; WARNING: from now on all memory references will be offset by 'ds' implicitly
@@ -16,7 +17,6 @@ mov bx, 0x7c0
 mov es, bx
 mov al, [es:the_secret]
 int 0x10
-
 
 jmp $
 
