@@ -24,7 +24,7 @@ rows.
 
 Open `32bit-print.asm` to see the code. It will always print the string
 on the top left of the screen, but soon we'll write higher level routines
-to replace it.
+to replace it. 
 
 Unfortunately we cannot yet call this routine from the bootloader, because
 we still don't know how to write the GDT and enter protected mode. Once

@@ -6,6 +6,5 @@ int 0x10 ; we already saw this doesn't work, right?
 
 the_secret:
     db "X"
-
 times 510 - ($-$$) db 0
 dw 0xaa55
